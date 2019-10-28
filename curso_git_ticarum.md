@@ -1147,3 +1147,343 @@ $ git commit -a -m "otro cambio"
 - Deberíamos utilizar ramas frecuentemente, siempre.
 
 ---
+
+## Ramas
+### Ramificar y Fusionar
+
+1. Trabajas en un sitio/aplicación web.
+2. Creas una rama para una incidencia/funcionalidad sobre la que trabajar.
+```
+git checkout -b new_feature
+```
+3. Realizas el trabajo (pruebas, etc.)
+```
+amateo@amateo-EXCALIBUR:test $ echo "Índice" > index.html
+amateo@amateo-EXCALIBUR:test $ git add index.html && git commit -m "Crea página índex"
+[new_feature 2299cd7] Crea página índex
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+amateo@amateo-EXCALIBUR:test $ git log
+commit 2299cd7f6f107141a5779caa45cf56277b071526 (HEAD -> new_feature)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80 (master)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+
+```
+---
+
+## Ramas
+### Ramificar y Fusionar
+4. Fusionas el trabajo (merge)
+```
+amateo@amateo-EXCALIBUR:test $ git checkout master 
+Cambiado a rama 'master'
+
+
+amateo@amateo-EXCALIBUR:test $ git merge new_feature
+Actualizando 8d89591..2299cd7
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+
+amateo@amateo-EXCALIBUR:test $ git log
+commit 2299cd7f6f107141a5779caa45cf56277b071526 (HEAD -> master, new_feature)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+```
+???
+- `Fast-forward`: Git ha movido el apuntador hacia adelante, ya que la confirmación apuntda en la rama estaba directamente encima.
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+1. Trabajas en un sitio/aplicación web.
+2. Creas una rama para una incidencia/funcionalidad `iss1`
+3. Realizas trabajo en `iss1`
+4. Creas una rama para otra incidencia/funcionalidad `iss2`
+5. Realizas trabajo en `iss2`
+6. Fusionas el trabajo de `iss1`
+7. Fusionas el trabajo de `iss2`
+8. Limpias ramas de trabajo `iss1` e `iss2`
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+1. Trabajas en un sitio/aplicación web.
+2. Creas una rama para una incidencia/funcionalidad `iss1`
+3. Realizas trabajo en `iss1`
+```
+amateo@amateo-EXCALIBUR:test2 $ git checkout -b iss1
+Cambiado a nueva rama 'iss1'
+
+
+amateo@amateo-EXCALIBUR:test2 $ echo "fichero 3" > fichero_3.txt && git add fichero_3.txt && git commit -m 'Crea fichero 3'
+[iss1 f6c8a5c] Crea fichero 3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fichero_3.txt
+
+
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0 (HEAD -> iss1)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:45:03 2019 +0100
+
+    Crea fichero 3
+
+commit 2299cd7f6f107141a5779caa45cf56277b071526 (master, iss2)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+
+```
+
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+4. Creas una rama para otra incidencia/funcionalidad `iss2`
+5. Realizas trabajo en `iss2`
+
+```
+amateo@amateo-EXCALIBUR:test2 $ git checkout master
+Cambiado a rama 'master'
+amateo@amateo-EXCALIBUR:test2 $
+amateo@amateo-EXCALIBUR:test2 $
+amateo@amateo-EXCALIBUR:test2 $ git checkout -b iss2
+Cambiado a nueva rama 'iss2'
+
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit 2299cd7f6f107141a5779caa45cf56277b071526 (HEAD -> iss2, master)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+
+amateo@amateo-EXCALIBUR:test2 $ echo "fichero 4" > fichero_4.txt && git add fichero_4.txt && git commit -m 'Crea fichero 4' 
+[iss2 6ae6335] Crea fichero 4
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fichero_4.txt
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit 6ae63358544398df655a51232565867a4c492840 (HEAD -> iss2)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:46:09 2019 +0100
+
+    Crea fichero 4
+
+commit 2299cd7f6f107141a5779caa45cf56277b071526 (master)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+
+```
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+6. Fusionas el trabajo de `iss1`
+```
+amateo@amateo-EXCALIBUR:test2 $ git checkout master 
+Cambiado a rama 'master'
+
+
+amateo@amateo-EXCALIBUR:test2 $ git merge iss1
+Actualizando 2299cd7..f6c8a5c
+Fast-forward
+ fichero_3.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fichero_3.txt
+amateo@amateo-EXCALIBUR:test2 $ 
+amateo@amateo-EXCALIBUR:test2 $ 
+amateo@amateo-EXCALIBUR:test2 $ 
+amateo@amateo-EXCALIBUR:test2 $ 
+amateo@amateo-EXCALIBUR:test2 $ 
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0 (HEAD -> master, iss1)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:45:03 2019 +0100
+
+    Crea fichero 3
+
+commit 2299cd7f6f107141a5779caa45cf56277b071526
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+```
+
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+7. Fusionas el trabajo de `iss2`
+
+```
+amateo@amateo-EXCALIBUR:test2 $ git checkout iss2
+Cambiado a rama 'iss2'
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit 6ae63358544398df655a51232565867a4c492840 (HEAD -> iss2)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:46:09 2019 +0100
+
+    Crea fichero 4
+
+commit 2299cd7f6f107141a5779caa45cf56277b071526
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:39:30 2019 +0100
+
+    Crea página índex
+
+commit 8d895918611510e71d7743313cd8241221bc9f80
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Thu Oct 24 16:58:56 2019 +0200
+
+    Commit inicial
+```
+
+???
+- Resaltar que en este momento, ya no se ve el puntero `mater` en la historia de `iss2`
+
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+7. Fusionas el trabajo de `iss2`
+```
+amateo@amateo-EXCALIBUR:test2 $ git checkout master 
+Cambiado a rama 'master'
+
+
+amateo@amateo-EXCALIBUR:test2 $ git merge iss2
+Merge made by the 'recursive' strategy.
+ fichero_4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fichero_4.txt
+
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit 943ea492dd520c18109004f7e510af9f602c15f3 (HEAD -> master)
+Merge: f6c8a5c 6ae6335
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:47:14 2019 +0100
+
+    Merge branch 'iss2'
+
+commit 6ae63358544398df655a51232565867a4c492840 (iss2)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:46:09 2019 +0100
+
+    Crea fichero 4
+
+commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0 (iss1)
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:45:03 2019 +0100
+
+    Crea fichero 3
+...
+```
+
+???
+- Se hace un `merge` la fusión ahora no es simplimente avanzar el puntero HEAD
+---
+
+## Ramas
+### Ramificar y Fusionar
+
+8. Limpias ramas de trabajo `iss1` e `iss2`
+
+```
+amateo@amateo-EXCALIBUR:test2 $ git log
+commit 943ea492dd520c18109004f7e510af9f602c15f3 (HEAD -> master)
+Merge: f6c8a5c 6ae6335
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:47:14 2019 +0100
+
+    Merge branch 'iss2'
+
+commit 6ae63358544398df655a51232565867a4c492840
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:46:09 2019 +0100
+
+    Crea fichero 4
+
+commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Mon Oct 28 16:45:03 2019 +0100
+
+    Crea fichero 3
+...
+```
+
+???
+- Han desaparecido los punteros `iss1` e `iss2`.
+
+---
+## Ramas
+### Gestión de ramas
+
+```
+amateo@amateo-EXCALIBUR:test2 $ git branch
+  iss3
+  iss4
+* master
+
+amateo@amateo-EXCALIBUR:test2 $ git branch -v
+  iss3   13ab76e Crea fichero 5
+  iss4   943ea49 Merge branch 'iss2'
+* master 943ea49 Merge branch 'iss2'
+
+```
+
+???
+- `git branch` tiene más funciones que crear y borrar ramas
+- `*`: Indicar la rama activa
+- Opciones `--merged` y `--no-merged` para mostrar solo las que no tienen (o si tienen) trabajos por fusionar.

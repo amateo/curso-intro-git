@@ -1157,6 +1157,7 @@ $ git commit -a -m "otro cambio"
 git checkout -b new_feature
 ```
 3. Realizas el trabajo (pruebas, etc.)
+
 ```
 amateo@amateo-EXCALIBUR:test $ echo "Índice" > index.html
 amateo@amateo-EXCALIBUR:test $ git add index.html && git commit -m "Crea página índex"
@@ -1176,13 +1177,14 @@ Author: Ángel L. Mateo <amateo@um.es>
 Date:   Thu Oct 24 16:58:56 2019 +0200
 
     Commit inicial
-
 ```
+
 ---
 
 ## Ramas
 ### Ramificar y Fusionar
 4. Fusionas el trabajo (merge)
+
 ```
 amateo@amateo-EXCALIBUR:test $ git checkout master 
 Cambiado a rama 'master'
@@ -1209,6 +1211,7 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
     Commit inicial
 ```
+
 ???
 - `Fast-forward`: Git ha movido el apuntador hacia adelante, ya que la confirmación apuntda en la rama estaba directamente encima.
 ---
@@ -1232,6 +1235,7 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 1. Trabajas en un sitio/aplicación web.
 2. Creas una rama para una incidencia/funcionalidad `iss1`
 3. Realizas trabajo en `iss1`
+
 ```
 amateo@amateo-EXCALIBUR:test2 $ git checkout -b iss1
 Cambiado a nueva rama 'iss1'
@@ -1261,7 +1265,6 @@ Author: Ángel L. Mateo <amateo@um.es>
 Date:   Thu Oct 24 16:58:56 2019 +0200
 
     Commit inicial
-
 ```
 
 ---
@@ -1315,14 +1318,15 @@ Author: Ángel L. Mateo <amateo@um.es>
 Date:   Thu Oct 24 16:58:56 2019 +0200
 
     Commit inicial
-
 ```
+
 ---
 
 ## Ramas
 ### Ramificar y Fusionar
 
 6. Fusionas el trabajo de `iss1`
+
 ```
 amateo@amateo-EXCALIBUR:test2 $ git checkout master 
 Cambiado a rama 'master'
@@ -1398,6 +1402,7 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 ### Ramificar y Fusionar
 
 7. Fusionas el trabajo de `iss2`
+
 ```
 amateo@amateo-EXCALIBUR:test2 $ git checkout master 
 Cambiado a rama 'master'
@@ -1478,8 +1483,16 @@ amateo@amateo-EXCALIBUR:test2 $ git branch
 
 amateo@amateo-EXCALIBUR:test2 $ git branch -v
   iss3   13ab76e Crea fichero 5
-  iss4   943ea49 Merge branch 'iss2'
-* master 943ea49 Merge branch 'iss2'
+  iss4   a1e85cb Crea fichero 6
+* master 13ab76e Crea fichero 5
+
+amateo@amateo-EXCALIBUR:test2 $ git branch --merged
+  iss3
+* master
+
+amateo@amateo-EXCALIBUR:test2 $ git branch -d iss4
+error: La rama 'iss4' no ha sido fusionada completamente.
+Si está seguro de querer borrarla, ejecute 'git branch -D iss4'.
 
 ```
 
@@ -1487,3 +1500,174 @@ amateo@amateo-EXCALIBUR:test2 $ git branch -v
 - `git branch` tiene más funciones que crear y borrar ramas
 - `*`: Indicar la rama activa
 - Opciones `--merged` y `--no-merged` para mostrar solo las que no tienen (o si tienen) trabajos por fusionar.
+- Opciones `-d` y `-D` para borrar
+
+---
+## Ramas
+### Ramas de largo recorrido
+![Ramificado progresivo](img/lr-branches-1.png)
+
+---
+## Ramas
+### Ramas de largo recorrido
+![Ramificado progresivo](img/lr-branches-1.png)
+![Ramificado progresivo](img/lr-branches-2.png)
+
+???
+- Fusionar varias una rama a otra varias veces
+- Tener ramas siempre abiertas: `master` (producción), `develop` (desarrollo/pruebas) y `features`
+
+---
+## Ramas
+### Ramas remotas
+
+- Referencias al estado de las ramas en los repositorios remotos
+- No las puedes mover, se mueven automáticamente al actualizar por la red
+- Indican el estado en que se encontraba el repositorio la última vez que conectaste con él
+- `<remote>/<rama>`
+
+```
+amateo@amateo-EXCALIBUR:curso $ git branch -av
+* inicio                977095d Sigo avanzando
+  remotes/origin/inicio e909bf4 Versión inicial
+  remotes/origin/master 85b56f4 Versión inicial
+```
+
+---
+## Ramas
+### Ramas remotas
+![](img/remote-branches-1.png)
+
+---
+## Ramas
+### Ramas remotas
+![](img/remote-branches-2.png)
+???
+- Alguien hace trabajo y lo sincroniza con el remoto (`190a3`)
+- Tú realizas trabajo en tu copia local (`893cf`)
+---
+## Ramas
+### Ramas remotas
+![](img/remote-branches-3.png)
+
+???
+- Sincronizas tu copia con el remoto mediante `get fetch`
+- Se crea una ramifición para indicar la distinta evolución
+
+---
+## Ramas
+### Publicar
+
+```
+$ git push origin serverfix
+Counting objects: 24, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (24/24), 1.91 KiB | 0 bytes/s, done.
+Total 24 (delta 2), reused 0 (delta 0)
+To https://github.com/schacon/simplegit
+ * [new branch]      serverfix -> serverfix
+```
+
+- `serverfix` es un atajo: `refs/heads/serverfix:refs/heads/serverfix`
+- Coge mi rama `serverfix` y actualiza con ella la rama `serverfix` del remoto
+
+---
+## Ramas
+### Publicar
+
+```
+amateo@amateo-EXCALIBUR:curso $ git push origin inicio:inicio2
+Contando objetos: 3, listo.
+Delta compression using up to 4 threads.
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 1.89 KiB | 1.89 MiB/s, listo.
+Total 3 (delta 1), reused 0 (delta 0)
+To gitlab.atica.um.es:amateo.um.es/curso-intro-git.git
+ * [new branch]      inicio -> inicio2
+```
+
+---
+## Ramas
+### Hacer seguimiento a las ramas
+
+- Ramas locales que se relacionan directamente con una rama remota.
+
+```
+amateo@amateo-EXCALIBUR:curso $ git branch -av
+* inicio                 977095d Sigo avanzando
+  remotes/origin/inicio  e909bf4 Versión inicial
+  remotes/origin/inicio2 977095d Sigo avanzando
+  remotes/origin/master  85b56f4 Versión inicial
+```
+---
+## Ramas
+### Hacer seguimiento a las ramas
+
+```
+amateo@amateo-EXCALIBUR:curso $ git checkout --track origin/inicio2
+Rama 'inicio2' configurada para hacer seguimiento a la rama remota 'inicio2' de 'origin'.
+Cambiado a nueva rama 'inicio2'
+
+
+amateo@amateo-EXCALIBUR:curso $ git checkout -b inicio3 origin/inicio2
+Rama 'inicio3' configurada para hacer seguimiento a la rama remota 'inicio2' de 'origin'.
+Cambiado a nueva rama 'inicio3'
+
+amateo@amateo-EXCALIBUR:curso $ git branch -vv
+  inicio  977095d Sigo avanzando
+  inicio2 977095d [origin/inicio2] Sigo avanzando
+* inicio3 977095d [origin/inicio2] Sigo avanzando
+```
+---
+## Ramas
+### Hacer seguimiento a las ramas
+
+```
+amateo@amateo-EXCALIBUR:curso $ git branch --set-upstream-to=origin/inicio
+Rama 'inicio' configurada para hacer seguimiento a la rama remota 'inicio' de 'origin'.
+
+amateo@amateo-EXCALIBUR:curso $ git status
+En la rama inicio
+Tu rama está adelantada a 'origin/inicio' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+```
+---
+## Ramas
+### Traer y fusionar
+
+```
+amateo@amateo-EXCALIBUR:curso $ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0)
+Desempaquetando objetos: 100% (3/3), listo.
+Desde gitlab.atica.um.es:amateo.um.es/curso-intro-git
+   977095d..070b889  inicio     -> origin/inicio
+Actualizando 977095d..070b889
+Fast-forward
+ curso_git_ticarum.md | 141 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 139 insertions(+), 2 deletions(-)
+```
+- Equivalente a `git fetch` más `git merge`
+
+---
+## Ramas
+### Eliminar ramas remotas
+
+```
+amateo@amateo-EXCALIBUR:curso $ git branch -vv
+* inicio  070b889 [origin/inicio] mas commits
+  inicio2 977095d [origin/inicio2] Sigo avanzando
+  inicio3 977095d [origin/inicio2] Sigo avanzando
+
+amateo@amateo-EXCALIBUR:curso $ git push origin --delete inicio2
+To gitlab.atica.um.es:amateo.um.es/curso-intro-git.git
+ - [deleted]         inicio2
+
+amateo@amateo-EXCALIBUR:curso $ git branch -vv
+* inicio  070b889 [origin/inicio] mas commits
+  inicio2 977095d [origin/inicio2: desaparecido] Sigo avanzando
+  inicio3 977095d [origin/inicio2: desaparecido] Sigo avanzando
+```
+

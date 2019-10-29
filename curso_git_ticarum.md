@@ -15,10 +15,8 @@ class: center, middle, inverse
 ---
 layout:false
 
-.left-column[
 ## Control de versiones
 ### ¿Qué es control de versiones? (VCS)
-]
 
 .right-column[
 - Sistema que registra los cambios sobre un archivo o conjunto de archivos
@@ -29,14 +27,9 @@ layout:false
 
 ---
 
-.left-column[
-## Control de versiones
 ### VCS centralizado
-]
 
-.right-column[
-![Control de versiones centralizado](img/centralized.png)
-]
+![Control de versiones centralizado](img/centralized.png){ width=10% }
 
 ???
 - Servidor con todos los archivos versionados
@@ -49,10 +42,8 @@ layout:false
   - Punto único de fallo
 ---
 
-.left-column[
 ## Control de versiones
 ### VCS distribuido
-]
 
 ![Control de versiones distribuido](img/distributed.png)
 

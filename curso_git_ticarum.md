@@ -1,5 +1,7 @@
-class: center, middle
-
+name: inverse
+layout: true
+class: center, middle, inverse
+---
 # Introducción a Git
 
 ## Ángel L. Mateo (amateo at um.es)
@@ -13,13 +15,17 @@ class: center, middle
 
 ---
 
+.left-column[
 ## Control de versiones
 ### ¿Qué es control de versiones? (VCS)
+]
 
+.right-column[
 - Sistema que registra los cambios sobre un archivo o conjunto de archivos
 - Recuperar versiones específicas
 - Comparar cambios a lo largo del tiempo
 - Ver quién introdujo qué modificación
+]
 
 ---
 

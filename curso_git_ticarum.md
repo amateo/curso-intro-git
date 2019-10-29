@@ -27,9 +27,10 @@ layout:false
 
 ---
 
+## Control de versiones
 ### VCS centralizado
 
-![Control de versiones centralizado](img/centralized.png){ width=10% }
+<img src="img/centralized.png" width="90%">
 
 ???
 - Servidor con todos los archivos versionados

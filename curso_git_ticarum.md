@@ -78,10 +78,8 @@ layout:false
   - Si no se modifica archivo, se guarda una liga al archivo anterior (que es igual)
 ---
 
-.left-column[
 ## Control de versiones
 ### Estados
-]
 
 ![Areas](img/areas.png)
 
@@ -99,10 +97,8 @@ layout:false
 - Área de preparación (staging area): Normalmente en el directorio .git. Almacena información sobre lo que va a ir en la próxima confirmación.
 ---
 
-.left-column[
 ## Control de versiones
 ### Flujo de trabajo
-]
 
 1. Modificas archivos (modificado)
   - Edición con cualquier editor/IDE
@@ -112,9 +108,7 @@ layout:false
   - `git commit`
 ---
 
-.left-column[
 ## Configuración inicial
-]
 
 - Archivo _/etc/gitconfig_: Configuración global para todos los usuarios
 - _~/.gitconfig_ o _~/.config/git/config_: Específica del usuario
@@ -125,29 +119,23 @@ layout:false
   - `--local`: Configuración específica para el repositorio (_.git/config_)
 ---
 
-.left-column[
 ## Configuración inicial
 ### Identidad
-]
 
 ```
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 ```
 
-.left-column[
 ## Configuración inicial
 ### Editor
-]
 
 ```
 $ git config --global core.editor vim
 ```
 
-.left-column[
 ## Configuración inicial
 ### Comprobar configuración
-]
 
 ```
 $ git config --list
@@ -168,19 +156,15 @@ John Doe
 ```
 ---
 
-.left-column[
 ## Obtener ayuda
-]
 
 - `git help <verb>`
 - `git <verb> --help` 
 - `man git-<verb>`
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Inicializar un repositorio
-]
 
 ```
 $ git init
@@ -191,10 +175,8 @@ $ git init
 - Repositorio vacío
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Clonar un repositorio
-]
 
 ```
 $ git clone https://github.com/libgit2/libgit2
@@ -202,20 +184,15 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Protocolos de transferencia
-]
 
 - https://
 - git://
 - usuario@servidor:/ruta/del/repositorio.git
 
-.left-column[
 ## Fundamentos de Git
 ### Guardando cambios
-]
-![Estado de los archivos](img/lifecycle.png)
 
 ???
 - untracked: Fichero que tenemos en el directorio (en el FS) pero que no está incluido en el repositorio, no se le hace seguimiento.
@@ -224,10 +201,8 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 - staged: Fichero en el área de preparación (se incluirá en commit)
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git status
@@ -236,10 +211,8 @@ nada para hacer commit, el árbol de trabajo esta limpio
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ echo 'My Project' > README.md
@@ -255,10 +228,8 @@ no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa 
 
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git add README.md
@@ -271,10 +242,8 @@ Cambios a ser confirmados:
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ echo "Modificacion" >> CONTRIBUTING.md
@@ -293,10 +262,8 @@ Cambios no rastreados para el commit:
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git add CONTRIBUTING.md
@@ -310,10 +277,8 @@ Cambios a ser confirmados:
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ echo "Modificacion 2" >> CONTRIBUTING.md
@@ -336,10 +301,8 @@ Cambios no rastreados para el commit:
 - *OJO*: Un `git commit` aquí confirma solo la primera confirmación del archivo, que es la que tenemos en el área de preparación.
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Comprobar estado
-]
 
 ```
 $ git status -s
@@ -358,10 +321,8 @@ M  lib/simplegit.rb
   - `Y`: Estado en el directorio de trabajo
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Ignorar archivos
-]
 
 - Archivo _.gitignore_
 - [github/gitignore](https://github.com/github/gitignore]: Ficheros _.gitignore_ para distintos tipos de proyectos
@@ -396,10 +357,8 @@ doc/**/*.txt
 
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Ver cambios
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git diff
@@ -417,10 +376,8 @@ index da101a5..7cc6c66 100644
 - Muestra las modificaciones que aún no se han llevado al área de preparación
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Ver cambios
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git diff --staged
@@ -444,10 +401,8 @@ index 0000000..56266d3
 - `git diff`: Puede ser confuso: Si has preparado todos los cambios, no mostrará nada (el `--staged` si que mostraría estos cambios)
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Confirmar cambios
-]
 
 ```
 $ git commit
@@ -460,10 +415,8 @@ $ git commit
 - Opción `-m`: Indicar directamente el mensaje de confirmación
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Confirmar cambios: Saltar el área de preparación
-]
 
 ```
 $ git commit -a
@@ -478,10 +431,8 @@ $ git commit <archivo> <archivo>
 - `-a`: Prepara automáticamente todos archivos modificados (rastreados)
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Eliminar archivos
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ rm README.md
@@ -500,10 +451,8 @@ sin cambios agregados al commit (usa "git add" y/o "git commit -a")
 - Hemos borrado el archivo de la copia de trabajo, pero no hemos incluido el borrado en el área de preparación
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Eliminar archivos
-]
 
 ```
 amateo@amateo-EXCALIBUR:/tmp/test$ git rm README.md
@@ -522,10 +471,8 @@ Cambios a ser confirmados:
 
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Renombrar archivos
-]
 
 - Git no rastrea los cambios en los nombres de los archivos
 - Se registra como un borrado y una adición
@@ -551,10 +498,8 @@ $ git add README
 - El `git mv` existe por conveniencia/comodidad
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log
@@ -590,10 +535,8 @@ Date:   Thu Oct 3 22:39:57 2019 +0200
 - Fecha y mensaje de confirmación
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log -p -2
@@ -641,10 +584,8 @@ index 0000000..f41aee1
 - `-2`: Muestra únicamente las dos últimas confirmaciones
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log --stat -2
@@ -673,10 +614,8 @@ Date:   Sat Oct 5 18:29:52 2019 +0200
 - `--stat`: Estadísticas de cada confirmación: Ficheros modificados y resumen de modificaciones
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log --pretty=oneline -10
@@ -693,10 +632,8 @@ e04231cad05f8432732cd084911922bd1ceb0b80 fix rendering of svg images
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log --pretty=oneline --graph --pretty=format:"%h %s" --since=1.weeks
@@ -729,10 +666,8 @@ $ git log --pretty=oneline --graph --pretty=format:"%h %s" --since=1.weeks
 - `--since`: Para indicar fecha en el límite del historial.
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Historial de confirmaciones
-]
 
 ```
 $ git log --pretty=oneline --author amateo@um.es --since=20-Oct-2019
@@ -745,10 +680,8 @@ b7669efc866363da5fdad822b31d0af9aaeb6b57 TLM-8391: Actualiza módulo puppetdb de
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Consultar modificaciones de una confirmación
-]
 
 ```
 $ git log -10  --pretty=oneline
@@ -784,10 +717,8 @@ index 2f3d5280c..bddf62606 100644
 - Diferencias entre el estado actual (HEAD) y el commit `88e417d538271f122cf520b042075ce59870b8b2`
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Consultar modificaciones de una confirmación
-]
 
 ```
 $ git diff 771b5cdb5b71f13a94463b042479f705299a69f8 2c9f861035011a06c8c70948a46608701de0e9b0
@@ -830,10 +761,8 @@ index 6ce6fa23e..425d04c8f 100644
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Consultar modificaciones de una confirmación
-]
 
 ```
 $ git diff 771b5cdb5b71f13a94463b042479f705299a69f8~ 771b5cdb5b71f13a94463b042479f705299a69f8
@@ -856,10 +785,8 @@ index 425d04c8f..6ce6fa23e 100644
 - `~`: Indica el siguiente commit al indicado
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Rectificar confirmación
-]
 
 ```
 .../test$ echo "Fichero 1" > fichero_1.txt
@@ -890,10 +817,8 @@ Archivos sin seguimiento:
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Rectificar confirmación
-]
 
 ```
 .../test$ git add fichero_2.txt
@@ -918,10 +843,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Deshacer un archivo preparado
-]
 
 ```
 .../test$ touch fichero_3.txt
@@ -947,10 +870,8 @@ no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa 
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Deshacer un archivo modificado
-]
 
 ```
 .../test$ echo "Modificacion" > fichero_1.txt
@@ -977,10 +898,8 @@ Fichero 1
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Trabajar con remotos
-]
 
 ```
 $ git clone https://github.com/schacon/ticgit
@@ -1002,10 +921,8 @@ origin	https://github.com/schacon/ticgit (push)
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Trabajar con remotos
-]
 
 ```
 amateo@amateo-EXCALIBUR:~/puppetcode/puppet-freeradius$ git remote -v
@@ -1019,10 +936,8 @@ upstream	https://github.com/djjudas21/puppet-freeradius (push)
 - Los distintos remotos pueden utilizar incluso distintos protocolos
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Trabajar con remotos
-]
 
 ```
 amateo@amateo-EXCALIBUR:~/puppetcode/puppet-freeradius$ git fetch upstream
@@ -1042,10 +957,8 @@ Desde https://github.com/djjudas21/puppet-freeradius
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Añadir repositorios remotos
-]
 
 ```
 amateo@amateo-EXCALIBUR:.../ticgit$ git remote
@@ -1059,10 +972,8 @@ pb	https://github.com/paulboone/ticgit (push)
 ```
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Traer y combinar remotos
-]
 
 ```
 $ git fetch [remote-name]
@@ -1075,10 +986,8 @@ $ git fetch [remote-name]
 - Trae los datos al repositorio local, pero no los actualiza en la copia de trabajo
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Traer y combinar remotos
-]
 
 ```
 $ git pull [remote-name] [branch-name]
@@ -1127,10 +1036,8 @@ La rama actual production está actualizada.
 - Si no, por defecto, el remote `origin` y la rama con el mismo nombre que la rama local actual.
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Enviar a tus remotos
-]
 
 ```
 $ git push [remote-name] [ref]
@@ -1144,10 +1051,8 @@ $ git push origin master
 - Busca la referencia `master` en el repositorio local y la envía `origin` con el mismo nombre `master`.
 ---
 
-.left-column[
 ## Fundamentos de Git
 ### Eliminar y renombrar remotos
-]
 ```
 amateo@amateo-EXCALIBUR:ticgit $ git remote -v
 origin	https://github.com/schacon/ticgit (fetch)
@@ -1159,8 +1064,6 @@ amateo@amateo-EXCALIBUR:ticgit $ git remote -v
 origin	https://github.com/schacon/ticgit (fetch)
 origin	https://github.com/schacon/ticgit (push)
 paul	https://github.com/paulboone/ticgit (fetch)
-paul	https://github.com/paulboone/ticgit (push)
-```
 
 ```
 amateo@amateo-EXCALIBUR:ticgit $ git remote remove paul
@@ -1170,10 +1073,8 @@ origin	https://github.com/schacon/ticgit (push)
 ```
 ---
 
-.left-column[
 ## Ramas
 ### ¿Qué es una rama?
-]
 
 ![Rama y su historial de confirmaciones](img/branch-and-history.png)
 
@@ -1184,10 +1085,8 @@ origin	https://github.com/schacon/ticgit (push)
 - En cada confirmación, la rama va avanzando automáticamente
 ---
 
-.left-column[
 ## Ramas
 ### Crear una rama
-]
 
 ```
 git branch testing
@@ -1197,10 +1096,8 @@ git branch testing
 
 ---
 
-.left-column[
 ## Ramas
 ### HEAD
-]
 
 ![Apuntador HEAD en master](img/head-to-master.png)
 
@@ -1208,10 +1105,8 @@ git branch testing
 - Apuntador especial que indica en qué punto nos encontramos
 ---
 
-.left-column[
 ## Ramas
 ### Cambiar de rama
-]
 
 ```
 $ git checkout testing
@@ -1225,10 +1120,8 @@ $ git checkout -b testing
 
 ---
 
-.left-column[
 ## Ramas
 ### Cambiar de rama
-]
 
 ```
 $ echo "test" >> test.rb
@@ -1241,10 +1134,8 @@ $ git commit -a -m "cambio de prueba"
 - Se observa cómo ha avanzado el puntero de la rama `testing`, pero no el de la rama `master`
 ---
 
-.left-column[
 ## Ramas
 ### Cambiar de rama
-]
 
 ![](img/checkout-master.png)
 
@@ -1253,14 +1144,12 @@ $ git commit -a -m "cambio de prueba"
 - Actualiza el directorio de trabajo
 ---
 
-.left-column[
 ## Ramas
 ### Cambiar de rama
 ```
 $ echo "otro cambio" >> test.rb
 $ git commit -a -m "otro cambio"
 ```
-]
 
 ![](img/advance-master.png)
 
@@ -1270,10 +1159,8 @@ $ git commit -a -m "otro cambio"
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 1. Trabajas en un sitio/aplicación web.
 2. Creas una rama para una incidencia/funcionalidad sobre la que trabajar.
@@ -1305,11 +1192,9 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
 4. Fusionas el trabajo (merge)
-]
 
 ```
 amateo@amateo-EXCALIBUR:test $ git checkout master 
@@ -1342,10 +1227,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 - `Fast-forward`: Git ha movido el apuntador hacia adelante, ya que la confirmación apuntda en la rama estaba directamente encima.
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 1. Trabajas en un sitio/aplicación web.
 2. Creas una rama para una incidencia/funcionalidad `iss1`
@@ -1357,10 +1240,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 8. Limpias ramas de trabajo `iss1` e `iss2`
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 1. Trabajas en un sitio/aplicación web.
 2. Creas una rama para una incidencia/funcionalidad `iss1`
@@ -1399,10 +1280,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 4. Creas una rama para otra incidencia/funcionalidad `iss2`
 5. Realizas trabajo en `iss2`
@@ -1454,10 +1333,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 6. Fusionas el trabajo de `iss1`
 
@@ -1499,10 +1376,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 7. Fusionas el trabajo de `iss2`
 
@@ -1534,10 +1409,8 @@ Date:   Thu Oct 24 16:58:56 2019 +0200
 
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 7. Fusionas el trabajo de `iss2`
 
@@ -1578,10 +1451,8 @@ Date:   Mon Oct 28 16:45:03 2019 +0100
 - Se hace un `merge` la fusión ahora no es simplimente avanzar el puntero HEAD
 ---
 
-.left-column[
 ## Ramas
 ### Ramificar y Fusionar
-]
 
 8. Limpias ramas de trabajo `iss1` e `iss2`
 
@@ -1612,10 +1483,8 @@ Date:   Mon Oct 28 16:45:03 2019 +0100
 - Han desaparecido los punteros `iss1` e `iss2`.
 
 ---
-.left-column[
 ## Ramas
 ### Gestión de ramas
-]
 
 ```
 amateo@amateo-EXCALIBUR:test2 $ git branch
@@ -1645,25 +1514,19 @@ Si está seguro de querer borrarla, ejecute 'git branch -D iss4'.
 - Opciones `-d` y `-D` para borrar
 
 ---
-.left-column[
 ## Ramas
 ### Ramas de largo recorrido
-]
 
 ![Ramificado progresivo](img/lr-branches-1.png)
 
 ---
-.left-column[
 ## Ramas
 ### Ramas de largo recorrido
-]
 ![Ramificado progresivo](img/lr-branches-1.png)
 
 ---
-.left-column[
 ## Ramas
 ### Ramas de largo recorrido
-]
 ![Ramificado progresivo](img/lr-branches-2.png)
 
 ???
@@ -1671,10 +1534,8 @@ Si está seguro de querer borrarla, ejecute 'git branch -D iss4'.
 - Tener ramas siempre abiertas: `master` (producción), `develop` (desarrollo/pruebas) y `features`
 
 ---
-.left-column[
 ## Ramas
 ### Ramas remotas
-]
 
 - Referencias al estado de las ramas en los repositorios remotos
 - No las puedes mover, se mueven automáticamente al actualizar por la red
@@ -1689,14 +1550,11 @@ amateo@amateo-EXCALIBUR:curso $ git branch -av
 ```
 
 ---
-.left-column[
 ## Ramas
 ### Ramas remotas
 ![](img/remote-branches-1.png)
-]
 
 ---
-.left-column[
 ## Ramas
 ### Ramas remotas
 ![](img/remote-branches-2.png)
@@ -1707,17 +1565,14 @@ amateo@amateo-EXCALIBUR:curso $ git branch -av
 ## Ramas
 ### Ramas remotas
 ![](img/remote-branches-3.png)
-]
 
 ???
 - Sincronizas tu copia con el remoto mediante `get fetch`
 - Se crea una ramifición para indicar la distinta evolución
 
 ---
-.left-column[
 ## Ramas
 ### Publicar
-]
 
 ```
 $ git push origin serverfix
@@ -1734,10 +1589,8 @@ To https://github.com/schacon/simplegit
 - Coge mi rama `serverfix` y actualiza con ella la rama `serverfix` del remoto
 
 ---
-.left-column[
 ## Ramas
 ### Publicar
-]
 
 ```
 amateo@amateo-EXCALIBUR:curso $ git push origin inicio:inicio2
@@ -1751,10 +1604,8 @@ To gitlab.atica.um.es:amateo.um.es/curso-intro-git.git
 ```
 
 ---
-.left-column[
 ## Ramas
 ### Hacer seguimiento a las ramas
-]
 
 - Ramas locales que se relacionan directamente con una rama remota.
 
@@ -1766,10 +1617,8 @@ amateo@amateo-EXCALIBUR:curso $ git branch -av
   remotes/origin/master  85b56f4 Versión inicial
 ```
 ---
-.left-column[
 ## Ramas
 ### Hacer seguimiento a las ramas
-]
 
 ```
 amateo@amateo-EXCALIBUR:curso $ git checkout --track origin/inicio2
@@ -1787,10 +1636,8 @@ amateo@amateo-EXCALIBUR:curso $ git branch -vv
 * inicio3 977095d [origin/inicio2] Sigo avanzando
 ```
 ---
-.left-column[
 ## Ramas
 ### Hacer seguimiento a las ramas
-]
 
 ```
 amateo@amateo-EXCALIBUR:curso $ git branch --set-upstream-to=origin/inicio
@@ -1802,10 +1649,8 @@ Tu rama está adelantada a 'origin/inicio' por 1 commit.
   (usa "git push" para publicar tus commits locales)
 ```
 ---
-.left-column[
 ## Ramas
 ### Traer y fusionar
-]
 
 ```
 amateo@amateo-EXCALIBUR:curso $ git pull
@@ -1823,10 +1668,8 @@ Fast-forward
 - Equivalente a `git fetch` más `git merge`
 
 ---
-.left-column[
 ## Ramas
 ### Eliminar ramas remotas
-]
 
 ```
 amateo@amateo-EXCALIBUR:curso $ git branch -vv

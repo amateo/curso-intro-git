@@ -1160,6 +1160,10 @@ $ git commit -a -m "cambio de prueba"
 ## Ramas
 ### Cambiar de rama
 
+```
+$ git checkout master
+```
+
 ![](img/checkout-master.png)
 
 ???

@@ -197,6 +197,7 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 ## Fundamentos de Git
 ### Guardando cambios
 
+![ciclo de vida del estado de los archivos](img/lifecycle.png)
 ???
 - untracked: Fichero que tenemos en el directorio (en el FS) pero que no está incluido en el repositorio, no se le hace seguimiento.
 - unmodified: Fichero en VCS que no se ha modificado (está confirmado)

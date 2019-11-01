@@ -1,7 +1,5 @@
-name: inverse
-layout: true
 class: center, middle, inverse
----
+
 # Introducción a Git
 
 ## Ángel L. Mateo (amateo at um.es)
@@ -13,7 +11,6 @@ class: center, middle, inverse
 - https://git-scm.com/book/es/v2
 
 ---
-layout:false
 
 ## Control de versiones
 ### ¿Qué es control de versiones? (VCS)

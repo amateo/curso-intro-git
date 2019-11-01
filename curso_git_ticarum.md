@@ -1355,29 +1355,18 @@ f6c8a5c (HEAD -> master, iss1) Crea fichero 3
 ## Ramas
 ### Ramificar y Fusionar
 
-7. Fusionas el trabajo de `iss2`
+<ol start="7">
+<li>Fusionas el trabajo de `iss2`</li>
+</ol>
 
 ```
 amateo@amateo-EXCALIBUR:test2 $ git checkout iss2
 Cambiado a rama 'iss2'
-amateo@amateo-EXCALIBUR:test2 $ git log
-commit 6ae63358544398df655a51232565867a4c492840 (HEAD -> iss2)
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:46:09 2019 +0100
 
-    Crea fichero 4
-
-commit 2299cd7f6f107141a5779caa45cf56277b071526
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:39:30 2019 +0100
-
-    Crea página índex
-
-commit 8d895918611510e71d7743313cd8241221bc9f80
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Thu Oct 24 16:58:56 2019 +0200
-
-    Commit inicial
+amateo@amateo-EXCALIBUR:test2 $ git log --oneline
+6ae6335 (HEAD -> iss2) Crea fichero 4
+2299cd7 Crea página índex
+8d89591 Commit inicial
 ```
 
 ???

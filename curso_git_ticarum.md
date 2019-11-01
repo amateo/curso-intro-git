@@ -1377,12 +1377,13 @@ amateo@amateo-EXCALIBUR:test2 $ git log --oneline
 ## Ramas
 ### Ramificar y Fusionar
 
-7. Fusionas el trabajo de `iss2`
+<ol start="7">
+<li>Fusionas el trabajo de `iss2`</li>
+</ol>
 
 ```
 amateo@amateo-EXCALIBUR:test2 $ git checkout master 
 Cambiado a rama 'master'
-
 
 amateo@amateo-EXCALIBUR:test2 $ git merge iss2
 Merge made by the 'recursive' strategy.
@@ -1390,26 +1391,12 @@ Merge made by the 'recursive' strategy.
  1 file changed, 1 insertion(+)
  create mode 100644 fichero_4.txt
 
-amateo@amateo-EXCALIBUR:test2 $ git log
-commit 943ea492dd520c18109004f7e510af9f602c15f3 (HEAD -> master)
-Merge: f6c8a5c 6ae6335
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:47:14 2019 +0100
-
-    Merge branch 'iss2'
-
-commit 6ae63358544398df655a51232565867a4c492840 (iss2)
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:46:09 2019 +0100
-
-    Crea fichero 4
-
-commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0 (iss1)
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:45:03 2019 +0100
-
-    Crea fichero 3
-...
+amateo@amateo-EXCALIBUR:test2 $ git log --oneline
+943ea49 (HEAD -> master) Merge branch 'iss2'
+6ae6335 (iss2) Crea fichero 4
+f6c8a5c (iss1) Crea fichero 3
+2299cd7 Crea página índex
+8d89591 Commit inicial
 ```
 
 ???

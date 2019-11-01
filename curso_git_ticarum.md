@@ -81,7 +81,7 @@ layout:false
 ## Control de versiones
 ### Estados
 
-![Areas](img/areas.png)
+<img src="img/areas.png" width="95%">
 
 - Confirmado (committed)
 - Modificado (modified)

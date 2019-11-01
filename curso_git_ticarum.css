@@ -89,6 +89,11 @@ code {
   float: right;
   padding-top: 1em;
 }
+.center-column {
+  width: 75%
+  float: center;
+  padding-top: 1em;
+}
 
 .blue {
     color: #0000ff;

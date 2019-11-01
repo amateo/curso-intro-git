@@ -1048,17 +1048,7 @@ Fast-forward
  Puppetfile                                                     |   4 +-
  hieradata/cluster_araneus.eyaml                                |   4 ++
  hieradata/cluster_dns.eyaml                                    |   2 +
- hieradata/cluster_noctua.eyaml                                 |   2 +
- hieradata/cluster_noctua2.eyaml                                | 214 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- hieradata/cluster_vulpes.eyaml                                 |  12 ++++
- hieradata/clutv00.um.es.eyaml                                  |   3 +
- hieradata/common.eyaml                                         |   2 +-
- hieradata/common_trusty.eyaml                                  |   6 ++
- manifests/profile/files/listas/root_scripts/listas/UMListas.pl |   5 +-
- manifests/profile/files/postfix/mime_header_checks.pcre        |   7 ++-
- manifests/profile/files/postfix/reject_umu_network.cidr        |   1 +
- manifests/profile/manifests/clutv/tareas.pp                    |   2 -
- manifests/profile/templates/gented/gented.conf.erb             |  12 ++--
+ ...
  14 files changed, 261 insertions(+), 15 deletions(-)
 La rama actual production está actualizada.
 ```

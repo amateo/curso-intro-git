@@ -784,6 +784,40 @@ index 425d04c8f..6ce6fa23e 100644
 ---
 
 ## Fundamentos de Git
+### Consultar modificaciones de una confirmación
+
+```
+$ git show 771b5cdb5b71f13a94463b042479f705299a69f8
+commit 771b5cdb5b71f13a94463b042479f705299a69f8
+Author: Ángel L. Mateo <amateo@um.es>
+Date:   Wed Sep 25 12:08:49 2019 +0200
+
+    TLM-8391: Corrige usuarios en profile::puppetdb::server
+
+    Para que el añadir los usuarios al grupo `puppetdb` se haga una vez que
+    ya se ha instalado el `puppetdb` y no de errores de que no existe el
+    grupo.
+
+diff --git a/manifests/profile/manifests/puppetdb/server.pp b/manifests/profile/manifests/puppetdb/server.pp
+index 425d04c8f..6ce6fa23e 100644
+--- a/manifests/profile/manifests/puppetdb/server.pp
++++ b/manifests/profile/manifests/puppetdb/server.pp
+@@ -81,7 +81,8 @@ class profile::puppetdb::server (
+   #
+   # Añado nuestros usuarios al grupo puppet
+   User<| gid == 'telematadm' |> {
+-    groups +> $puppetdb::server::puppetdb_group
++    groups  +> $puppetdb::server::puppetdb_group,
++    require +> Class['::puppetdb::server'],
+   }
+
+   #
+```
+???
+- `~`: Indica el siguiente commit al indicado
+---
+
+## Fundamentos de Git
 ### Rectificar confirmación
 
 ```

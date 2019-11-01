@@ -692,13 +692,7 @@ $ git log -10  --pretty=oneline
 d3ae9bd30939816f95e341b63ff95498e79cb7cc (HEAD -> production) Merge branch 'ARAWEB-3710' into 'production'
 88e417d538271f122cf520b042075ce59870b8b2 Merge branch 'TLM-8391-glis' into 'production'
 2121738ef1d5f40b3f1912f06052cb5720c2ae77 añadir ruta /web/perfil/cv/
-29c90de1bfc0eee3df9def5a14e88c47f32b61dd cambiar ER para que el perfil pueda ir sin @um.es
-771b5cdb5b71f13a94463b042479f705299a69f8 TLM-8391: Corrige usuarios en profile::puppetdb::server
-b7669efc866363da5fdad822b31d0af9aaeb6b57 TLM-8391: Actualiza módulo puppetdb de puppet
-544fb5650471252c079047caa76c335692c523c4 TLM-8391: Fuerza versión 6 de puppetdb en las glis3x
-2c9f861035011a06c8c70948a46608701de0e9b0 TLM-8391: Configura postgres para glis30
-1257361d5800a0e2d7b28ef43e4771302d2bf7ad TLM-8391: Deshabilita nagios en glis30
-932db905f1c1fdd272550dcc1caf1f5422d65e93 Merge branch 'TLM-8340' into 'production'
+...
 ```
 
 ```

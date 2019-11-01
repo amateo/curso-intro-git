@@ -18,12 +18,10 @@ layout:false
 ## Control de versiones
 ### ¿Qué es control de versiones? (VCS)
 
-.right-column[
 - Sistema que registra los cambios sobre un archivo o conjunto de archivos
 - Recuperar versiones específicas
 - Comparar cambios a lo largo del tiempo
 - Ver quién introdujo qué modificación
-]
 
 ---
 
@@ -46,7 +44,14 @@ layout:false
 ## Control de versiones
 ### VCS distribuido
 
-![Control de versiones distribuido](img/distributed.png)
+<img src="img/distributed.png" width="55%">
+
+---
+
+## Control de versiones
+### VCS distribuido
+
+![Almacenamiento como cambios](img/distributed.png)
 
 ???
 - Cliente replica completamente el repositorio

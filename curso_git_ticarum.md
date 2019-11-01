@@ -44,7 +44,9 @@ layout:false
 ## Control de versiones
 ### VCS distribuido
 
+.center-column[
 <img src="img/distributed.png" width="55%">
+]
 
 ---
 

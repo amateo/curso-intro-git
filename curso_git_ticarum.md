@@ -1465,11 +1465,6 @@ Si está seguro de querer borrarla, ejecute 'git branch -D iss4'.
 ---
 ## Ramas
 ### Ramas de largo recorrido
-![Ramificado progresivo](img/lr-branches-1.png)
-
----
-## Ramas
-### Ramas de largo recorrido
 ![Ramificado progresivo](img/lr-branches-2.png)
 
 ???

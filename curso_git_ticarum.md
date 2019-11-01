@@ -1075,6 +1075,7 @@ $ git push origin master
 
 ## Fundamentos de Git
 ### Eliminar y renombrar remotos
+
 ```
 amateo@amateo-EXCALIBUR:ticgit $ git remote -v
 origin	https://github.com/schacon/ticgit (fetch)
@@ -1086,6 +1087,7 @@ amateo@amateo-EXCALIBUR:ticgit $ git remote -v
 origin	https://github.com/schacon/ticgit (fetch)
 origin	https://github.com/schacon/ticgit (push)
 paul	https://github.com/paulboone/ticgit (fetch)
+```
 
 ```
 amateo@amateo-EXCALIBUR:ticgit $ git remote remove paul
@@ -1093,6 +1095,7 @@ amateo@amateo-EXCALIBUR:ticgit $ git remote -v
 origin	https://github.com/schacon/ticgit (fetch)
 origin	https://github.com/schacon/ticgit (push)
 ```
+
 ---
 
 ## Ramas
@@ -1105,6 +1108,7 @@ origin	https://github.com/schacon/ticgit (push)
 - Uno de los puntos fuertes de Git
 - Rama es un apuntador móvil apuntando a las confirmaciones
 - En cada confirmación, la rama va avanzando automáticamente
+
 ---
 
 ## Ramas

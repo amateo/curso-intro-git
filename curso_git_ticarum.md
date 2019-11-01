@@ -1490,7 +1490,8 @@ amateo@amateo-EXCALIBUR:curso $ git branch -av
 ---
 ## Ramas
 ### Ramas remotas
-![](img/remote-branches-1.png)
+
+<img src="img/remote-branches-1.png" width="90%">
 
 ---
 ## Ramas

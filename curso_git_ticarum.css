@@ -90,9 +90,9 @@ code {
   padding-top: 1em;
 }
 .center-column {
-  width: 75%
+  /*width: 75%*/
   float: center;
-  padding-top: 1em;
+  /*padding-top: 1em;*/
 }
 
 .blue {

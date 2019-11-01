@@ -41,11 +41,13 @@ layout:false
   - Punto único de fallo
 ---
 
+.left-column[
 ## Control de versiones
 ### VCS distribuido
+]
 
-.center-column[
-<img src="img/distributed.png" width="55%">
+.right-column[
+<img src="img/distributed.png" width="90%">
 ]
 
 ---

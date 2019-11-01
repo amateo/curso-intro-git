@@ -50,13 +50,6 @@ layout:false
 <img src="img/distributed.png" width="90%">
 ]
 
----
-
-## Control de versiones
-### VCS distribuido
-
-![Almacenamiento como cambios](img/distributed.png)
-
 ???
 - Cliente replica completamente el repositorio
 - Cada cliente es una copia completa
@@ -68,12 +61,15 @@ layout:false
 
 ---
 
-.left-column[
 ## Control de versiones
 ### Copia instantánea vs diferencia
-]
 
 ![Almacenamiento como cambios](img/deltas.png)
+
+---
+
+## Control de versiones
+### Copia instantánea vs diferencia
 ![Almacenamiento como snapshots](img/snapshots.png)
 
 ???

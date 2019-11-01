@@ -1284,25 +1284,10 @@ amateo@amateo-EXCALIBUR:test2 $ echo "fichero 3" > fichero_3.txt && git add fich
  1 file changed, 1 insertion(+)
  create mode 100644 fichero_3.txt
 
-
-amateo@amateo-EXCALIBUR:test2 $ git log
-commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0 (HEAD -> iss1)
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:45:03 2019 +0100
-
-    Crea fichero 3
-
-commit 2299cd7f6f107141a5779caa45cf56277b071526 (master, iss2)
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:39:30 2019 +0100
-
-    Crea página índex
-
-commit 8d895918611510e71d7743313cd8241221bc9f80
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Thu Oct 24 16:58:56 2019 +0200
-
-    Commit inicial
+amateo@amateo-EXCALIBUR:test2 $ git log --oneline
+f6c8a5c (HEAD -> iss1) Crea fichero 3
+2299cd7 (master, iss2) Crea página índex
+8d89591 Commit inicial
 ```
 
 ---

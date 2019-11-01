@@ -192,6 +192,7 @@ $ git clone https://github.com/libgit2/libgit2 mylibgit
 - https://
 - git://
 - usuario@servidor:/ruta/del/repositorio.git
+---
 
 ## Fundamentos de Git
 ### Guardando cambios

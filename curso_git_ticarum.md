@@ -1406,29 +1406,20 @@ f6c8a5c (iss1) Crea fichero 3
 ## Ramas
 ### Ramificar y Fusionar
 
-8. Limpias ramas de trabajo `iss1` e `iss2`
+<ol start="8">
+<li>Limpias ramas de trabajo `iss1` e `iss2`</li>
+</ol>
 
 ```
-amateo@amateo-EXCALIBUR:test2 $ git log
-commit 943ea492dd520c18109004f7e510af9f602c15f3 (HEAD -> master)
-Merge: f6c8a5c 6ae6335
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:47:14 2019 +0100
+amateo@amateo-EXCALIBUR:test2 $ git branch -d iss1
+amateo@amateo-EXCALIBUR:test2 $ git branch -d iss2
 
-    Merge branch 'iss2'
-
-commit 6ae63358544398df655a51232565867a4c492840
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:46:09 2019 +0100
-
-    Crea fichero 4
-
-commit f6c8a5ccaedbef3e032d9676040cbfb0d6a30eb0
-Author: Ángel L. Mateo <amateo@um.es>
-Date:   Mon Oct 28 16:45:03 2019 +0100
-
-    Crea fichero 3
-...
+amateo@amateo-EXCALIBUR:test2 $ git log --oneline
+943ea49 (HEAD -> master) Merge branch 'iss2'
+6ae6335 Crea fichero 4
+f6c8a5c Crea fichero 3
+2299cd7 Crea página índex
+8d89591 Commit inicial
 ```
 
 ???

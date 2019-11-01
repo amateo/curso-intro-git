@@ -1136,9 +1136,6 @@ git branch testing
 
 ```
 $ git checkout testing
-```
-
-```
 $ git checkout -b testing
 ```
 

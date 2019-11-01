@@ -1503,7 +1503,7 @@ amateo@amateo-EXCALIBUR:curso $ git branch -av
 ---
 ## Ramas
 ### Ramas remotas
-![](img/remote-branches-3.png)
+<img src="img/remote-branches-3.png" width="90%">
 
 ???
 - Sincronizas tu copia con el remoto mediante `get fetch`

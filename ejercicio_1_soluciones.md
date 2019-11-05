@@ -13,3 +13,17 @@
   ```console
   git config --list
   ```
+
+# Ejercicio 2
+
+1. Crea un repositorio nuevo con el nombre `curso` y muestra su contenido
+  ```console
+  tmp $ mkdir curso
+  tmp $ cd curso/
+  curso$ git init
+  Inicializado repositorio Git vacío en /tmp/curso/.git/
+  curso$ ls
+  curso$ ls -A
+  .git
+  ```
+

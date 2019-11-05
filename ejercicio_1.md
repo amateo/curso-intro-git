@@ -43,3 +43,14 @@
 1. Mostrar los cambios de la última versión del repositorio con respecto a la anterior
 2. Cambiar el mensaje del último commit por `Añade capítulo sobre gestión de ramas al índice`
 3. Volver a mostrar los últimos cambios del repositorio
+
+# Ejercicio 7
+
+1. Crea un fichero `foo.md`
+2. Comprueba el estado del repositorio
+3. ¿Qué pasará si realizamos ahora `git commit`?
+3. Añade el fichero `foo.md` a la lista de ficheros ignorados
+4. Comprueba el estado del repositorio
+5. Ignora el fichero `.gitignore`
+6. Comprueba el estado del repositorio
+7. Deshaz el paso 6 y haz commit del fichero `.gitignore`

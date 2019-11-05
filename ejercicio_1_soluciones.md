@@ -111,3 +111,35 @@
   curso$ git show
   ```
 
+# Ejercicio 7
+
+1. Crea un fichero `foo.md`
+  ```console
+  curso$ touch foo.md
+  ```
+2. Comprueba el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+3. ¿Qué pasará si realizamos ahora `git commit`?
+3. Añade el fichero `foo.md` a la lista de ficheros ignorados
+  ```
+  curso$ echo "foo.md" > .gitignore
+  ```
+5. Comprueba el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+6. Ignora el fichero `.gitignore`
+  ```console
+  curso$ echo ".gitignore" >> .gitignore
+  ```
+7. Comprueba el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+8. Deshaz el paso 6 y haz commit del fichero `.gitignore`
+  ```console
+  git add .gitignore
+  git commit -m 'Ignora fichero foo.md'
+  ```

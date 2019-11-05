@@ -7,3 +7,16 @@
 # Ejercicio 2
 
 1. Crea un repositorio nuevo con el nombre `curso` y muestra su contenido
+
+# Ejercicio 3
+
+1. Comprueba el estado del repositorio
+2. Crea un fichero `indice.md` con el contenido:
+  ```
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Repositorios remotos
+  ```
+3. Comprueba de nuevo el estado del repositorio
+4. Añade el fichero al área de preparación
+5. Vuelve a comprobar el estado del repositorio

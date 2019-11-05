@@ -27,3 +27,34 @@
   .git
   ```
 
+# Ejercicio 3
+
+1. Comprueba el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+2. Crea un fichero `indice.md` con el contenido:
+  ```
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Repositorios remotos
+  ```
+  ```console
+  curso$ cat > indice.md
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Repositorios remotos
+  ```
+3. Comprueba de nuevo el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+4. Añade el fichero al área de preparación
+  ```console
+  curso$ git add indice.md
+  ```
+5. Vuelve a comprobar el estado del repositorio
+  ```console
+  curso$ git status
+  ```
+

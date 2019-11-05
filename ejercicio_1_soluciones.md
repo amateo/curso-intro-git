@@ -58,3 +58,13 @@
   curso$ git status
   ```
 
+# Ejercicio 4
+
+1. Realizar un commit de los últimos cambios con el mensaje `Añade índice del curso`
+  ```console
+  curso$ git commit -m 'Añade índice del curso'
+  ```
+2. Ver el estado del repositorio
+  ```console
+  curso$ git status
+  ```

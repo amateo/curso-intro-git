@@ -20,3 +20,8 @@
 3. Comprueba de nuevo el estado del repositorio
 4. Añade el fichero al área de preparación
 5. Vuelve a comprobar el estado del repositorio
+
+# Ejercicio 4
+
+1. Realizar un commit de los últimos cambios con el mensaje `Añade índice del curso`
+2. Ver el estado del repositorio

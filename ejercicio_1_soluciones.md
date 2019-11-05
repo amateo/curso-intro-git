@@ -68,3 +68,31 @@
   ```console
   curso$ git status
   ```
+
+# Ejercicio 5
+
+1. Cambiar el fichero `indice.md` para que contenga lo siguiente:
+  ```
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Gestión de ramas
+  # Repositorios remotos
+  ```
+  ```console
+  curso$ cat > indice.md
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Gestión de ramas
+  # Repositorios remotos
+  [Ctrl+D]
+  ```
+2. Mostrar los cambios con respecto a la última versión del repositorio
+  ```console
+  curso$ git diff
+  ```
+3. Hacer un commit de los cambios con el mensaje `Añade capítulo sobre gestión de ramas`
+  ```console
+  curso$ git add indice.md
+  curso$ git commit -m 'Añade capítulo sobre gestión de ramas'
+  ```
+

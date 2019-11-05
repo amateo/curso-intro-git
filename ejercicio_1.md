@@ -25,3 +25,15 @@
 
 1. Realizar un commit de los últimos cambios con el mensaje `Añade índice del curso`
 2. Ver el estado del repositorio
+
+# Ejercicio 5
+
+1. Cambiar el fichero `indice.md` para que contenga lo siguiente:
+  ```
+  # Introducción a Git
+  # Flujo de trabajo básico
+  # Gestión de ramas
+  # Repositorios remotos
+  ```
+2. Mostrar los cambios con respecto a la última versión del repositorio
+3. Hacer un commit de los cambios con el mensaje `Añade capítulo sobre gestión de ramas`

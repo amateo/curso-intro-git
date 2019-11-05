@@ -54,3 +54,16 @@
 5. Ignora el fichero `.gitignore`
 6. Comprueba el estado del repositorio
 7. Deshaz el paso 6 y haz commit del fichero `.gitignore`
+
+# Ejercicio 8
+
+1. Crea un fichero `LEEME.txt` con contenido:
+  ```
+  Proyecto Git para realizar ejercicios del curso
+  ```
+2. Añade el fichero al repositorio y confirma la adición
+3. Renombra el archivo a `README.md`
+4. Comprueba el estado
+5. Confirma los cambios
+6. Borra el archivo `README.md`
+7. Confirma los cambios

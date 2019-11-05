@@ -143,3 +143,42 @@
   git add .gitignore
   git commit -m 'Ignora fichero foo.md'
   ```
+
+# Ejercicio 8
+
+1. Crea un fichero `LEEME.txt` con contenido:
+  ```
+  Proyecto Git para realizar ejercicios del curso
+  ```
+  ```console
+  curso$ cat > LEEME.txt
+  Proyecto Git para realizar ejercicios del curso
+  [Ctrl+D]
+  ```
+2. Añade el fichero al repositorio y confirma la adición
+  ```console
+  curso$ git add LEEME.txt
+  curso$ git commit -m 'Añade fichero LEEME.txt'
+  ```
+3. Renombra el archivo a `README.md`
+  ```console
+  curso$ git mv LEEME.txt README.md
+  ```
+4. Comprueba el estado
+  ```console
+  curso$ git status
+  ```
+5. Confirma los cambios
+  ```console
+  curso$ git commit
+  ```
+6. Borra el archivo `README.md`
+  ```console
+  curso$ git rm README.md
+  ```
+7. Confirma los cambios
+  ```console
+  curso$ git commit
+  ```
+
+

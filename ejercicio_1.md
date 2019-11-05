@@ -37,3 +37,9 @@
   ```
 2. Mostrar los cambios con respecto a la última versión del repositorio
 3. Hacer un commit de los cambios con el mensaje `Añade capítulo sobre gestión de ramas`
+
+# Ejercicio 6
+
+1. Mostrar los cambios de la última versión del repositorio con respecto a la anterior
+2. Cambiar el mensaje del último commit por `Añade capítulo sobre gestión de ramas al índice`
+3. Volver a mostrar los últimos cambios del repositorio

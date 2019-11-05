@@ -67,3 +67,16 @@
 5. Confirma los cambios
 6. Borra el archivo `README.md`
 7. Confirma los cambios
+
+# Ejercicio 9
+
+1. Comprueba el historial de confirmaciones
+2. Muestra el historial de confirmaciones, incluyendo los cambios de cada confirmación
+3. Muestra el historial de confirmaciones, incluyen un resumen de los cambios. Limita la salida a las últimos 3 confirmaciones.
+4. Comprueba las distintas opciones para formatear la salida del historial de confirmaciones
+5. Configura Git para que, por defecto, se muestre el log con formato `oneline`
+6. Vuelve a comprobar el historial de confirmaciones (sin indicar opciones)
+7. Consulta las modificaciones realizadas por el commit con mensaje `Añade fichero LEEME.txt`
+8. Consulta las modificaciones realizadas por la antepenúltima modificación
+9. Consulta las modificaciones realizadas por las 4 últimas modificaciones
+10. Consulta las modificaciones realizadas entres 2 commits cualquiera

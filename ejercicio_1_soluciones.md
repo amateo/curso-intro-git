@@ -181,4 +181,46 @@
   curso$ git commit
   ```
 
+# Ejercicio 9
+
+1. Comprueba el historial de confirmaciones
+  ```console
+  curso$ git log
+  ```
+2. Muestra el historial de confirmaciones, incluyendo los cambios de cada confirmación
+  ```console
+  curso$ git log -p
+  ```
+3. Muestra el historial de confirmaciones, incluyen un resumen de los cambios. Limita la salida a las últimos 3 confirmaciones.
+  ```console
+  curso$ git log --stat -3
+  ```
+4. Comprueba las distintas opciones para formatear la salida del historial de confirmaciones
+  ```console
+  curso$ git log --help
+  ```
+5. Configura Git para que, por defecto, se muestre el log con formato `oneline`
+  ```console
+  curso$ git config format.pretty oneline
+  ```
+6. Vuelve a comprobar el historial de confirmaciones (sin indicar opciones)
+  ```console
+  curso$ git log
+  ```
+7. Consulta las modificaciones realizadas por el commit con mensaje `Añade fichero LEEME.txt`
+  ```console
+  curso$ git show 0583a2d8227b4eed8c68ae06dbfffa5148939cbd
+  ```
+8. Consulta las modificaciones realizadas por la antepenúltima modificación
+  ```console
+  curso$ git show HEAD~2
+  ```
+9. Consulta las modificaciones realizadas por las 4 últimas modificaciones
+  ```console
+  curso$ git diff HEAD~3^
+  ```
+10. Consulta las modificaciones realizadas entres 2 commits cualquiera
+  ```console
+  curso$ git diff 54f5548e2d3e1f2cc558e66744daaef84a981d72^ 54f5548e2d3e1f2cc558e66744daaef84a981d72
+  ```
 

@@ -236,5 +236,59 @@
   ```console
   curso$ git push origin master
   ```
-5. Navega por el repositorio
+5. Muestra los repositorios remotos del proyecto
+  ```console
+  curso$ git remote -v
+  ```
+6. Navega por el repositorio
 
+
+# Ejercicio 11
+
+1. Clona el repositorio creado anteriormente en otra ruta de tu equipo
+  ```console
+  cd /tmp
+  tmp$ git clone http://cursogit.um.es/amateo/curso.git curso-2
+  ```
+2. Muestra los repositorios remotos y el estado
+  ```console
+  curso-2$ git remote -v
+  ```
+  ```console
+  curso-2$ git status
+  ```
+3. Añade y confirma un fichero `capitulo1.md` con contenido:
+  ```
+  # Introducción a Git
+  Este capítulo se va a hablar de cómo comenzar a utilizar Git
+  ```
+  ```console
+  curso-2$ cat > capitulo1.md
+# Introducción a Git
+Este capítulo se va a hablar de cómo comenzar a utilizar Git.
+[Ctrl+d]
+curso-2$ git add capitulo1.md
+curso-2$ git commit
+  ```
+4. Comprueba el estado del repositorio
+  ```console
+  curso-2$ git status
+  ```
+5. Publica las modificaciones en el repositorio remoto sin introducir usuario/clave
+ ```console
+ curso-2$ git push
+ ```
+6. Añade clave ssh a tu perfil de gitlab
+7. Modifica el repositorio remoto para conectar mediante ssh
+  ```console
+  curso-2$ git remote set-url origin git@cursogit.um.es:amateo/curso.git
+  ```
+8. Vuelve a intentar publicar en el repositorio remoto
+ ```console
+ curso-2$ git push
+ ```
+9. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo
+  ```console
+  curso-2$ cd /tmp/curso
+  curso$ git pull origin master
+  ```

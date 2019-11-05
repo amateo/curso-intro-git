@@ -89,3 +89,19 @@
 4. Publica el contenido
 5. Muestra los repositorios remotos del proyecto
 6. Navega por el repositorio
+
+# Ejercicio 11
+
+1. Clona el repositorio creado anteriormente en otra ruta de tu equipo
+2. Muestra los repositorios remotos y el estado
+3. Añade y confirma un fichero `capitulo1.md` con contenido:
+  ```
+  # Introducción a Git
+  Este capítulo se va a hablar de cómo comenzar a utilizar Git
+  ```
+4. Comprueba el estado del repositorio
+5. Publica las modificaciones en el repositorio remoto sin introducir usuario/clave
+6. Añade clave ssh a tu perfil de gitlab
+7. Modifica el repositorio remoto para conectar mediante ssh
+8. Vuelve a intentar publicar en el repositorio remoto
+9. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo

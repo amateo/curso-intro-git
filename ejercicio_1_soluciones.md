@@ -224,3 +224,17 @@
   curso$ git diff 54f5548e2d3e1f2cc558e66744daaef84a981d72^ 54f5548e2d3e1f2cc558e66744daaef84a981d72
   ```
 
+# Ejercicio 10
+
+1. Registrarse en [gitlab del curso](http://cursogit.um.es)
+2. Crea un proyecto llamado `curso`
+3. Añade el repositorio remoto al repositorio local `curso`
+  ```console
+  curso$ git remote add origin http://cursogit.um.es/amateo/curso.git
+  ```
+4. Publica el contenido
+  ```console
+  curso$ git push origin master
+  ```
+5. Navega por el repositorio
+

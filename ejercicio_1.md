@@ -80,3 +80,12 @@
 8. Consulta las modificaciones realizadas por la antepenúltima modificación
 9. Consulta las modificaciones realizadas por las 4 últimas modificaciones
 10. Consulta las modificaciones realizadas entres 2 commits cualquiera
+
+# Ejercicio 10
+
+1. Registrarse en [gitlab del curso](http://cursogit.um.es)
+2. Crea un proyecto llamado `curso`
+3. Añade el repositorio remoto al repositorio local `curso`
+4. Publica el contenido
+5. Muestra los repositorios remotos del proyecto
+6. Navega por el repositorio

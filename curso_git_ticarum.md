@@ -2,7 +2,7 @@ class: center, middle, inverse
 
 # Introducción a Git
 
-## Ángel L. Mateo (amateo at um.es)
+## Ángel L. Mateo
 
 ---
 # Referencias

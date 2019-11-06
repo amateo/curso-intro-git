@@ -7,3 +7,10 @@
 5. Crea una nueva rama llamada `pruebas`
 6. Vuelve a listar las ramas del proyecto
 7. Observa los contenidos del directorio `.git/refs/heads/master`
+
+# Ejercicio 2
+
+1. Cambia a la rama `pruebas`
+2. Lista las ramas del repositorio
+3. Lista las ramas del repositorio, incluidas las ramas remotas
+4. Muestra el histórico de los últimos 5 cambios

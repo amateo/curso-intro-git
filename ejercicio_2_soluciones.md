@@ -148,3 +148,21 @@
   ```
   curso$ git branch --no-merged
   ```
+
+# Ejercicio 5
+
+1. Limpia todas las ramas de trabajo ya finalizado
+  ```
+  curso$ git branch --merged
+  ```
+  ```
+  curso$ git branch -d capitulo3 capitulo4 pruebas
+  ```
+2. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+  ```
+  curso$ git log --oneline -5
+  ```
+3. ¿Qué diferencia observas con respecto al último listado obtenido en el ejercicio anterior?
+  ```
+  La diferencia es que en estos listados ya no aparecen las referencias a las ramas borradas
+  ```

@@ -52,3 +52,9 @@
 11. Mezcla el contenido de la rama `capitulo4` en la rama `master`. Observa el tipo de mezcla que se ha realizado.
 12. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
 13. Muestra un listado de las ramas pendientes de mezcla
+
+# Ejercicio 5
+
+1. Limpia todas las ramas de trabajo ya finalizado
+2. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+3. ¿Qué diferencia observas con respecto al último listado obtenido en el ejercicio anterior?

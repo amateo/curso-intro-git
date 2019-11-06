@@ -166,3 +166,35 @@
   ```
   La diferencia es que en estos listados ya no aparecen las referencias a las ramas borradas
   ```
+
+# Ejercicio 6
+
+NOTA: Si has seguido todos los pasos tal cual se han ido indicando, tendrás la rama `master` de tu repositorio local desligada (sin track) de cualquier rama remota y tendrás el remoto `origin`. La salida del `git status` debería ser muy parecida a:
+```
+curso$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+```
+
+1. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas `master` de los distintos repositorios.
+  ```
+  curso$ git log --oneline -5
+  ```
+2. Sube el último trabajo realizado al repositorio en gitlab.
+  ```
+  curso$ git push origin master
+  ```
+3. Vuelve al directorio del repositorio clonado en el ejercicio 11
+4. Muestra el estado del repositorio
+  ```
+  curso-2$ git status
+  ```
+5. Actualiza el repositorio local *sin actualizar* la copia de trabajo
+6. Muestra el estado del repositorio. Observa la diferencia con respecto al estado anterior
+  ```
+  curso-2$ git status
+  ```
+7. Actualiza el directorio de trabajo con los últimos cambios realizados en el repositorio remoto.
+  ```
+  curso-2$ git merge origin/master
+  ```

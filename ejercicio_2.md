@@ -28,3 +28,27 @@
 5. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
 6. Mezcla el contenido de la rama `pruebas` en la rama `master`. Observa el tipo de mezcla que ha hecho.
 7. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+
+# Ejercicio 4
+
+1. Crea una rama llamada `capitulo3`. Cambia a dicha rama.
+2. Añade y confirma un fichero `capitulo3.md` con contenido:
+  ```
+  # Gestión de ramas
+  Este es el capítulo dedicado a la gestión de ramas
+  ```
+3. Crea una nueva rama llamada `capitulo4` a partir de la rama `master`. Cambia a dicha rama
+4. Añade y confirma un fichero `capitulo4.md` con contenido:
+  ```
+  # Repositorios remotos
+  Capítulo dedicado a la gestión de repositorios remotos
+  ```
+5. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+6. Colócate en la rama `master`
+7. Mezcla el contenido de la rama `capitulo3` en la rama `master`. Observa el tipo de mezcla que se ha realizado.
+8. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+9. Muestra un listado de las ramas que ya están mezcladas
+10. Muestra un listado de las ramas pendientes de mezcla
+11. Mezcla el contenido de la rama `capitulo4` en la rama `master`. Observa el tipo de mezcla que se ha realizado.
+12. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+13. Muestra un listado de las ramas pendientes de mezcla

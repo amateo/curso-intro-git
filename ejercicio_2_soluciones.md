@@ -1,4 +1,4 @@
-# Ejercicio 1
+# Ejercicio 12
 
 1. Lista las ramas del proyecto
   ```
@@ -30,7 +30,7 @@
   curso$ cat .git/refs/heads/*
   ```
 
-# Ejercicio 2
+# Ejercicio 13
 
 1. Cambia a la rama `pruebas`
   ```
@@ -49,7 +49,7 @@
   curso$ git log --oneline -5
   ```
 
-# Ejercicio 3
+# Ejercicio 14
 
 1. Añade y confirma un fichero `capitulo2.md` con contenido:
   ```
@@ -84,7 +84,7 @@
   curso$ git log --oneline -5
   ```
 
-# Ejercicio 4
+# Ejercicio 15
 
 1. Crea una rama llamada `capitulo3`. Cambia a dicha rama.
   ```
@@ -149,7 +149,7 @@
   curso$ git branch --no-merged
   ```
 
-# Ejercicio 5
+# Ejercicio 16
 
 1. Limpia todas las ramas de trabajo ya finalizado
   ```
@@ -167,7 +167,7 @@
   La diferencia es que en estos listados ya no aparecen las referencias a las ramas borradas
   ```
 
-# Ejercicio 6
+# Ejercicio 17
 
 NOTA: Si has seguido todos los pasos tal cual se han ido indicando, tendrás la rama `master` de tu repositorio local desligada (sin track) de cualquier rama remota y tendrás el remoto `origin`. La salida del `git status` debería ser muy parecida a:
 ```

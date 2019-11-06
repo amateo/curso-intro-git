@@ -49,3 +49,37 @@
   curso$ git log --oneline -5
   ```
 
+# Ejercicio 3
+
+1. Añade y confirma un fichero `capitulo2.md` con contenido:
+  ```
+  # Flujo de trabajo básico
+  Este es el capítulo dedicado a explicar el flujo de trabajo
+  ```
+2. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+  ```
+  curso$ git log --oneline -5
+  ```
+3. Observa los contenidos del directorio `.git/refs/heads/master`
+  ```
+  curso$ ls .git/refs/heads/
+  ```
+  ```
+  curso$ cat .git/refs/heads/*
+  ```
+4. Cambia a la rama `master`
+  ```
+  curso$ git checkout master
+  ```
+5. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+  ```
+  curso$ git log --oneline -5
+  ```
+6. Mezcla el contenido de la rama `pruebas` en la rama `master`. Observa el tipo de mezcla que ha hecho.
+  ```
+  curso$ git merge pruebas
+  ```
+7. Muestra el histórico de los últimos 5 cambios. Observa los apuntadores de ramas.
+  ```
+  curso$ git log --oneline -5
+  ```

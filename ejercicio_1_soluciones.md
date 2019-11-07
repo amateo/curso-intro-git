@@ -227,20 +227,24 @@
 # Ejercicio 10
 
 1. Registrarse en [gitlab del curso](http://cursogit.um.es)
-2. Crea un proyecto llamado `curso`
-3. Añade el repositorio remoto al repositorio local `curso`
+2. Añade clave ssh a tu perfil de gitlab
+  ```
+  curso$ ssh-keygen
+  ```
+3. Crea un proyecto llamado `curso`
+4. Añade el repositorio remoto al repositorio local `curso`
   ```console
   curso$ git remote add origin http://cursogit.um.es/amateo/curso.git
   ```
-4. Publica el contenido
+5. Publica el contenido
   ```console
   curso$ git push origin master
   ```
-5. Muestra los repositorios remotos del proyecto
+6. Muestra los repositorios remotos del proyecto
   ```console
   curso$ git remote -v
   ```
-6. Navega por el repositorio
+7. Navega por el repositorio
 
 
 # Ejercicio 11
@@ -278,16 +282,7 @@ curso-2$ git commit
  ```console
  curso-2$ git push
  ```
-6. Añade clave ssh a tu perfil de gitlab
-7. Modifica el repositorio remoto para conectar mediante ssh
-  ```console
-  curso-2$ git remote set-url origin git@cursogit.um.es:amateo/curso.git
-  ```
-8. Vuelve a intentar publicar en el repositorio remoto
- ```console
- curso-2$ git push
- ```
-9. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo
+6. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo
   ```console
   curso-2$ cd /tmp/curso
   curso$ git pull origin master

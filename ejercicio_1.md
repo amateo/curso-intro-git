@@ -84,11 +84,12 @@
 # Ejercicio 10
 
 1. Registrarse en [gitlab del curso](http://cursogit.um.es)
-2. Crea un proyecto llamado `curso`
-3. Añade el repositorio remoto al repositorio local `curso`
-4. Publica el contenido
-5. Muestra los repositorios remotos del proyecto
-6. Navega por el repositorio
+2. Añade clave ssh a tu perfil de gitlab
+3. Crea un proyecto llamado `curso`
+4. Añade el repositorio remoto al repositorio local `curso`
+5. Publica el contenido
+6. Muestra los repositorios remotos del proyecto
+7. Navega por el repositorio
 
 # Ejercicio 11
 
@@ -101,7 +102,4 @@
   ```
 4. Comprueba el estado del repositorio
 5. Publica las modificaciones en el repositorio remoto sin introducir usuario/clave
-6. Añade clave ssh a tu perfil de gitlab
-7. Modifica el repositorio remoto para conectar mediante ssh
-8. Vuelve a intentar publicar en el repositorio remoto
-9. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo
+6. Vuelve al repositorio anterior (utilizado en ejercicio 10) y actualízalo
